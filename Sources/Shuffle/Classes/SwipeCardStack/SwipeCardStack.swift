@@ -79,7 +79,7 @@ open class SwipeCardStack: UIView, SwipeCardDelegate, UIGestureRecognizerDelegat
   }
 
   var isEnabled: Bool {
-    return !isAnimating && (topCard?.isUserInteractionEnabled ?? true)
+    return true
   }
 
   var isAnimating: Bool = false
