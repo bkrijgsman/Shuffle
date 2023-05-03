@@ -68,7 +68,7 @@ open class SwipeCardStack: UIView, SwipeCardDelegate, UIGestureRecognizerDelegat
   /// An ordered array containing all pairs of currently visible cards.
   ///
   /// The `Card` at the first position is the topmost `SwipeCard` in the view hierarchy.
-  public var visibleCards: [Card] = []
+  var visibleCards: [Card] = []
 
   var topCard: SwipeCard? {
     return visibleCards.first?.card
