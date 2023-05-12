@@ -448,21 +448,28 @@ open class SwipeCardStack: UIView, SwipeCardDelegate, UIGestureRecognizerDelegat
     delegate?.cardStack?(self, didSelectCardAt: topCardIndex)
   }
 
+ public var IsSwiping = false
+    
   func cardDidBeginSwipe(_ card: SwipeCard) {
+    self.IsSwiping = true
     animator.removeBackgroundCardAnimations(self)
   }
 
   func cardDidContinueSwipe(_ card: SwipeCard) {
+    self.IsSwiping = true
     for (position, backgroundCard) in backgroundCards.enumerated() {
       backgroundCard.transform = backgroundCardDragTransform(topCard: card, currentPosition: position + 1)
     }
   }
 
   func cardDidCancelSwipe(_ card: SwipeCard) {
+    self.IsSwiping = false
     animator.animateReset(self, topCard: card)
   }
 
   func cardDidFinishSwipeAnimation(_ card: SwipeCard) {
+      
+    self.IsSwiping = true
     card.removeFromSuperview()
   }
 
