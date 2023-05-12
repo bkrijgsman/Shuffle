@@ -82,7 +82,7 @@ open class SwipeCardStack: UIView, SwipeCardDelegate, UIGestureRecognizerDelegat
     return true
   }
 
-  var isAnimating: Bool = false
+  public var isAnimating: Bool = false
 
   let cardContainer = UIView()
 
