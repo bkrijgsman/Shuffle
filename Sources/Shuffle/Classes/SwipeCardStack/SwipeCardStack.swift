@@ -78,7 +78,7 @@ open class SwipeCardStack: UIView, SwipeCardDelegate, UIGestureRecognizerDelegat
     return Array(visibleCards.dropFirst()).map { $0.card }
   }
 
-  var isEnabled: Bool {
+  public var isEnabled: Bool {
     return true
   }
 
