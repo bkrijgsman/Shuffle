@@ -469,7 +469,7 @@ open class SwipeCardStack: UIView, SwipeCardDelegate, UIGestureRecognizerDelegat
 
   func cardDidFinishSwipeAnimation(_ card: SwipeCard) {
       
-    self.IsSwiping = true
+    self.IsSwiping = false
     card.removeFromSuperview()
   }
 
